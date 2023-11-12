@@ -7,7 +7,7 @@ Tiêu đề vắn tắt dự án
 Liệt kê thành viên nhóm phát triển dự án
 - Trần Duy Thành - 21001584
 - Nguyễn Trung Thông - 21001589
-- Đỗ Thị Trang – 2101591
+- Đỗ Thị Trang – 21001591
 - Nguyễn Hữu Tần – 21001582
 - Chu Minh Ngọc - 21001570
 # 1. Mô tả game
