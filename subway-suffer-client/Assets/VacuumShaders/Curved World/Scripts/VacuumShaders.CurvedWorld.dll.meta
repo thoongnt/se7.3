@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 8b701c814d4d4ef4e963629b54896ec8
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap:
+    VacuumShaders.CurvedWorld.CurvedWorld_MeshBoundsCorrector: {fileID: 5721338939258241955,
+      guid: 0000000000000000d000000000000000, type: 0}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
