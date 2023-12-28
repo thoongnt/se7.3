@@ -44,7 +44,7 @@ Animation:
   m_Animation: {fileID: -203655887218126122, guid: 23f27a76d53c87f46b8b399aa79f0f55,
     type: 3}
   m_Animations:
-  - {fileID: 0}
+  - {fileID: -203655887218126122, guid: 23f27a76d53c87f46b8b399aa79f0f55, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
