@@ -206,7 +206,7 @@ public class Modules : MonoBehaviour {
         speedGame = 0.78f;
         speedAddMoreUse = 1f;
         timePlayer = 0;
-        coinPlayer = 0;
+        coinPlayer = 10000000;
         scorePlayer = 0;
         xPointPlayer = 1;
         numberXpoint = 1;
