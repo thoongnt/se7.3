@@ -95,7 +95,7 @@ public class HeroController : MonoBehaviour {
     {
         if (onlyShowMenu > 0) return;
         Camera.main.GetComponent<CameraController>().ResetTimeFollow();
-        ResetStatus();
+        ResetStatus();  //đặt lại trạng thái nhân vật
         ResetDown(false, false);
         numberLaneNew = 0;
         numberLaneOld = 0;
@@ -923,7 +923,7 @@ public class HeroController : MonoBehaviour {
     }
 
     //XU LY DIEU KHIEN NHAN VAT BAT LAI
-    private bool mesStartBack = false;
+    private bool mesStartBack = false;  //Nhân vật có di chuyển ngược lại hay chưa
     private float speedBack = 1f;
     private bool doneBackHero = true;
     private int sightCheckBack = 1;//chieu back lai
@@ -931,6 +931,7 @@ public class HeroController : MonoBehaviour {
 
     void RunBackHero()
     {
+        //Đang bay thì không di chuyển ngược lại
         if (Modules.statusGame == StatusGame.flyScene) mesStartBack = false;
         if (!mesStartBack) return;
         //xu ly chet neu bac vao ben trong doi tuong va cham
@@ -991,15 +992,15 @@ public class HeroController : MonoBehaviour {
         if (transform.position.x > oldPointBefore.x) sightCheckBack = -1;
         doneBackHero = false;
         //checkFalling = false;
-        transform.GetComponent<Rigidbody>().isKinematic = false;
-        transform.GetComponent<Rigidbody>().useGravity = false;
+        transform.GetComponent<Rigidbody>().isKinematic = false; 
+        transform.GetComponent<Rigidbody>().useGravity = false; //tắt trọng lực để không làm nhân vật rơi xuống
         transform.GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
         mesStartBack = true;
         mesStartMove = false;
     }
 
     //XU LY VA CHAM
-    private Vector3 oldPointBefore = Vector3.zero;
+    private Vector3 oldPointBefore = Vector3.zero;  //Lưu vị trí trước đó của nhân vật
     private int numberLaneOld = 0, numberLaneNew = 0;//-1,0,1
 
     public Vector3 GetOldPoint()
@@ -1021,10 +1022,10 @@ public class HeroController : MonoBehaviour {
     {
         if (myHotAirBalloon != null) Destroy(myHotAirBalloon);
     }
-
-    private TypeCollider typeCollider = TypeCollider.top;
-    private int checkEnterExitCol = 0;
-    private List<Collider> listCollCheck = new List<Collider>();
+   
+    private TypeCollider typeCollider = TypeCollider.top;   //Xác định loại va chạm
+    private int checkEnterExitCol = 0;  
+    private List<Collider> listCollCheck = new List<Collider>();    //chứa collider được sử dụng để kiểm tra va chạm với other object
 
     void OnCollisionEnter(Collision collision)
     {
@@ -1100,11 +1101,12 @@ public class HeroController : MonoBehaviour {
                     typeCollider = TypeCollider.right;
             }
         }
-        //print(typeCollider);  
+        //print(typeCollider);
+        //Xử lý va chạm dưới
         if (typeCollider == TypeCollider.bottom) { 
             checkEnterExitCol = tempCol; /*if (barrier != null) print("bottom");*/ 
                 //Kiểm tra nếu như barrier khác null or y có nhỏ hơn 8.5
-               if (barrier != null || myCollider.transform.position.y < 8.5f){  
+            if (barrier != null || myCollider.transform.position.y < 8.5f){  
                 if (collision.transform.position.z < transform.position.z || (barrier != null || barrier.typeBarrier == TypeBarrier.neverFall && Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
                         transform.GetComponent<Rigidbody>().isKinematic = true;
                         transform.Translate(Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(29f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);
@@ -1196,6 +1198,7 @@ public class HeroController : MonoBehaviour {
     void GetCollWhenBack()
     {
         listCollCheck = new List<Collider>();
+        //Tìm các colliders xung quanh 15 đơn vị
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 15f);
         for (var i = 0; i < hitColliders.Length; i++)
         {
