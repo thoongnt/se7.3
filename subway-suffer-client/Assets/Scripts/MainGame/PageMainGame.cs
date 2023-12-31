@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using Assets.Scripts.Generals;
+using System.Collections.Generic;
+using System;
 
-public class PageMainGame : MonoBehaviour {
+public class PageMainGame : MonoBehaviour
+{
 
     public GameObject containMainGame, containHeroConstruct, containAchievement, containShopItem, containHighScore, containOpenBox;
     public GameObject containUIMenu, containUIPlay;
@@ -11,7 +14,7 @@ public class PageMainGame : MonoBehaviour {
     public GameObject panelShowEatItemsLeft, panelShowEatItemsRight, panelShowBuyItems, panelEffectAddPoint, panelHighScoreNow, panelViewEnemy, panelGameGuide;
     public GameObject panelMissions, panelChallenge, panelBonus, panelCrackGlass, panelFakeCity;
     public GameObject enemyLeft;
-    public GameObject itemShoeLeft, itemShoeRight, itemMagnet, itemRocket, itemCable;
+    public GameObject itemShoeLeft, itemShoeRight, itemMagnet, itemRocket, itemCable, itemTest, itemArmor;
     public Vector3 pointStartEnemyLeft = Vector3.zero, pointStartEnemyRight = Vector3.zero;
     public GameObject mesSaveMeBox, mesPauseGame, mesCountTime,
         mesNotEnoughKey, mesSetting, getSkisBox,
@@ -92,7 +95,7 @@ public class PageMainGame : MonoBehaviour {
     {
         //System.GC.Collect();//giai thoat ram
 #if (UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR)
-        //ADSController.Instance.RequestAndLoadInterstitialAd();
+        //ADSController.Instance.RequestInterstitial(false);
 #endif
         Modules.parSpeedFly.GetComponent<ParticleSystem>().Stop();
         Modules.SetStatusButShareVideo(butShareVideo);
@@ -240,6 +243,39 @@ public class PageMainGame : MonoBehaviour {
                 }
             }
         }
+
+        bool swipeLeft = Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow);
+        if (swipeLeft)
+        {
+            bool checkMoreMove = false;
+            if (oldSwipe == "") checkMoreMove = true;
+            oldSwipe = "left";
+            Modules.mainCharacter.GetComponent<HeroController>().MoveLeft(checkMoreMove);
+            firstSwipe = false;
+        }
+        // bool swipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
+        // if(swipeRight){
+        //     bool checkMoreMove = false;
+        //     if (oldSwipe == "") checkMoreMove = true;
+        //     oldSwipe = "right";
+        //     Modules.mainCharacter.GetComponent<HeroController>().MoveRight(checkMoreMove);
+        // }
+        // bool swipeUp = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
+        // if(swipeUp){
+        //     bool checkMoreMove = false;
+        //             if (oldSwipe == "") checkMoreMove = true;
+        //             oldSwipe = "up";
+        //             Modules.mainCharacter.GetComponent<HeroController>().MoveUp(checkMoreMove);
+        //             firstSwipe = false;
+        // }
+        // bool swipeDown = Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
+        // if(swipeDown){
+        //     bool checkMoreMove = false;
+        //             if (oldSwipe == "") checkMoreMove = true;
+        //             oldSwipe = "down";
+        //             Modules.mainCharacter.GetComponent<HeroController>().MoveDown(checkMoreMove);
+        //             firstSwipe = false;
+        // }
     }
 
     private bool CheckNoMessageShow()
@@ -363,6 +399,26 @@ public class PageMainGame : MonoBehaviour {
         textKey.text = Modules.totalKey.ToString();
     }
 
+    IEnumerator LoadImage(string url)
+    {
+        WWW www = new WWW(url);
+        while (!www.isDone && string.IsNullOrEmpty(www.error))
+            yield return new WaitForSeconds(0.1f);
+        if (string.IsNullOrEmpty(www.error) && url != "Null" && www.texture != null)
+        {
+            int width = www.texture.width;
+            int height = www.texture.height;
+            if (width > 128) width = 128;
+            if (height > 128) height = 128;
+            Transform tranAvatar = Modules.panelHighScoreNow.transform.Find("Avatar");
+            Image fbAvatar = tranAvatar.GetComponent<Image>();
+            fbAvatar.sprite = Sprite.Create(www.texture, new Rect(0, 0, width, height), new Vector2(0, 0));
+        }
+        www.Dispose();
+        //yield return Resources.UnloadUnusedAssets();
+        yield break;
+    }
+
     private int maxTime = 5, Runtime = 0;
     void CheckAvatarEnemy()
     {
@@ -384,7 +440,7 @@ public class PageMainGame : MonoBehaviour {
 
     void UpdateAvatarEnemy()
     {
-        if (!Modules.startViewOnline) 
+        if (!Modules.startViewOnline)
             Modules.panelHighScoreNow.SetActive(true);
         else
         {
@@ -399,7 +455,7 @@ public class PageMainGame : MonoBehaviour {
         Text fbName = tranName.GetComponent<Text>();
         if (Modules.fbHighScore.Count > 0)//neu co doi thu thi lay thang cuoi cung
         {
-            StartCoroutine(Utils.LoadImage(Modules.fbAvatarEnemy[Modules.fbAvatarEnemy.Count - 1]));
+            StartCoroutine(LoadImage(Modules.fbAvatarEnemy[Modules.fbAvatarEnemy.Count - 1]));
             fbName.text = Modules.fbNameEnemy[Modules.fbNameEnemy.Count - 1].ToUpper();
             Modules.totalScoreNow = Modules.fbHighScore[Modules.fbHighScore.Count - 1];
         }
@@ -680,7 +736,6 @@ public class PageMainGame : MonoBehaviour {
         rateBox.GetComponent<Animator>().SetTrigger("TriOpen");
     }
 
-    /*
     public void ButtonShareFacebook()
     {
         Modules.PlayAudioClipFree(Modules.audioButton);
@@ -695,7 +750,6 @@ public class PageMainGame : MonoBehaviour {
             shareFBBox.GetComponent<Animator>().SetTrigger("TriOpen");
         }
     }
-    
 
     public void ButtonInviteFacebook()
     {
@@ -713,7 +767,6 @@ public class PageMainGame : MonoBehaviour {
             inviteFBBox.GetComponent<Animator>().SetTrigger("TriOpen");
         }
     }
-    */
 
     public void UpdateKeys()
     {

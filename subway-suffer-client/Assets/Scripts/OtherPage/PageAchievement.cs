@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Facebook.Unity;
 
 public class PageAchievement : MonoBehaviour
 {
@@ -19,21 +20,22 @@ public class PageAchievement : MonoBehaviour
     public Vector3 pointListCountry = Vector3.zero;
     public Vector3 pointListWorld = Vector3.zero;
     public Vector3 pointListMultiplayer = Vector3.zero;
-    //private FacebookController fbController;
+    private FacebookController fbController;
     private GameObject panelTopCountry;//list hien thi xep hang dat nuoc
     private GameObject panelTopWorld;//list hien thi xep hang the gioi
     private GameObject panelTopMultiplayer;//list hien thi xep hang Multiplayer
     private GameObject mainCharacter;
 
-	public void CallStart () {
+    public void CallStart()
+    {
         ChangeAllLanguage();
         float scoreNow = Modules.totalScore;
-		float coinNow = Modules.totalCoin;
+        float coinNow = Modules.totalCoin;
         CancelInvoke("BlinkDoubleCoin");
-        if(Modules.showScorePlay)
+        if (Modules.showScorePlay)
         {
             scoreNow = Modules.scorePlayer;
-			coinNow = Modules.coinPlayer;
+            coinNow = Modules.coinPlayer;
             doubleCoin.interactable = true;
             Invoke("BlinkDoubleCoin", 0f);
         }
@@ -92,13 +94,12 @@ public class PageAchievement : MonoBehaviour
         panelFBLogin.SetActive(true);
 #else
         //xu ly xep hang facebook
-        /*
         if (fbController == null) fbController = Modules.facebookController.GetComponent<FacebookController>();
-		fbController.isPostDone = false;
-		fbController.isGetDone = false;
+        fbController.isPostDone = false;
+        fbController.isGetDone = false;
         fbController.getEnemy = false;
-		if (fbController.panelGetInfo != null)
-			Destroy(fbController.panelGetInfo);
+        if (fbController.panelGetInfo != null)
+            Destroy(fbController.panelGetInfo);
         if (FB.IsLoggedIn)
         {
             panelFBLogin.SetActive(false);
@@ -113,24 +114,24 @@ public class PageAchievement : MonoBehaviour
         Invoke("PostScoreFacebook", 0f);
         Invoke("GetScoreFacebook", 0f);
         InvokeRepeating("GetBoardScoreFacebook", 0f, 1f);
-        */
 #endif
         //xu ly xep hang quoc gia va the gioi
         if (Modules.containAchievement.activeSelf) StartCoroutine(PostScore());
         Invoke("PostScoreWorld", 0f);
-	}
+    }
 
     void OnDisable()
     {
         CancelInvoke();
     }
 
-	public void DoubleCoins () {
-		Modules.itemBonusViewAds = "DoubleCoins";
+    public void DoubleCoins()
+    {
+        Modules.itemBonusViewAds = "DoubleCoins";
 #if (UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR)
-        //ADSController.Instance.RequestAndLoadRewardedInterstitialAd();
+        //ADSController.Instance.RequestRewardBasedVideo(true, CallReward);
 #endif
-	}
+    }
 
     private void CallReward(bool obj)
     {
@@ -172,13 +173,11 @@ public class PageAchievement : MonoBehaviour
         Invoke("BlinkDoubleCoin", 0.5f);
     }
 
-    /*
-
     void PostScoreFacebook()
     {
         if (FB.IsLoggedIn)
         {
-			fbAvatar.sprite = Modules.fbMyAvatar;
+            fbAvatar.sprite = Modules.fbMyAvatar;
             fbName.text = Modules.fbName;
             fbScore.text = Mathf.RoundToInt(Modules.totalScore).ToString();
             fbIndex.text = "1";
@@ -207,7 +206,7 @@ public class PageAchievement : MonoBehaviour
         panelLoadingA.SetActive(false);
         fbController.isGetDone = false;
     }
-    */
+
     void PostScoreWorld()
     {
         if (statusPost)
@@ -311,7 +310,7 @@ public class PageAchievement : MonoBehaviour
         form.AddField("fail", Modules.failNow);
         WWW _resuilt = new WWW(Modules.linkPost, form);
         float runTime = 0f;
-        while (!_resuilt.isDone && runTime < Modules. maxTime)
+        while (!_resuilt.isDone && runTime < Modules.maxTime)
         {
             runTime += Modules.requestTime;
             yield return new WaitForSeconds(Modules.requestTime);
@@ -521,7 +520,6 @@ public class PageAchievement : MonoBehaviour
         yield break;
     }
 
-    /*
     public void ButtonLoginFacebook()
     {
 #if !(UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR)
@@ -530,7 +528,7 @@ public class PageAchievement : MonoBehaviour
         Modules.PlayAudioClipFree(Modules.audioButton);
         fbController.FBlogin();
     }
-    */
+
     public void ButtonTopFacebookClick()
     {
         Modules.PlayAudioClipFree(Modules.audioButton);

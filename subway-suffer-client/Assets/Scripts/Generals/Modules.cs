@@ -1293,8 +1293,7 @@ public class Modules : MonoBehaviour {
     public static string linkIconGame = "http://52.220.93.168/Others/Icons/IconFruntastic.png";
     public static string linkChange = "http://52.220.93.168/Others/ChangeLink.php";
     public static string linkShortFB = "https://fb.me/303070490147052";
-
-    /*
+    
     public static void ClickShareFB()
     {
         string Info = AllLanguages.menuInforStart[indexLanguage] + " " + totalScore + " " + AllLanguages.menuInforEnd[indexLanguage];
@@ -1333,8 +1332,8 @@ public class Modules : MonoBehaviour {
             "&caption=" + Title.Replace(" ", "%20") +
             "&description=" + Description.Replace(" ", "%20") +
             "&redirect_uri=https://facebook.com/");
-    }
-    */
+    }   
+
     public static void SetStatusButShareVideo(GameObject objButton)
     {
         if (!Recorder.Instance.isAvailableVideo)
