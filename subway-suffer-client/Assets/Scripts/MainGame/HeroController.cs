@@ -1537,6 +1537,22 @@ public class HeroController : MonoBehaviour {
         }
     }
 
+    //Kiểm tra nhân vật có còn trong khối startTunner
+    void OnTriggerStay(Collider collider)
+    {
+        if (Modules.statusGame != StatusGame.play) return;
+        ItemInformation item = collider.gameObject.GetComponent<ItemInformation>();
+        if (item != null)
+        {
+            if (item.typeItem == TypeItems.startTunner)
+            {
+                Modules.SetAllowHoverbike(false);
+                return;
+            }
+            RunFunctionItem(item.typeItem, collider.transform.position.x);
+        }
+    }
+
     void SetBackObjectFollow()
     {
         Camera.main.GetComponent<CameraController>().ResetTimeFollow();
