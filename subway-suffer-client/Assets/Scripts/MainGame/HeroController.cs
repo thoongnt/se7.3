@@ -1106,7 +1106,7 @@ public class HeroController : MonoBehaviour {
         if (typeCollider == TypeCollider.bottom) { 
             checkEnterExitCol = tempCol; /*if (barrier != null) print("bottom");*/ 
                 //Kiểm tra nếu như barrier khác null or y có nhỏ hơn 8.5
-            if (barrier != null || myCollider.transform.position.y < 8.5f){  
+            if (barrier != null && myCollider.transform.position.y < 8.5f){  
                 if (collision.transform.position.z < transform.position.z || (barrier != null || barrier.typeBarrier == TypeBarrier.neverFall && Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
                         transform.GetComponent<Rigidbody>().isKinematic = true;
                         transform.Translate(Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(29f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);

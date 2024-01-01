@@ -12,7 +12,7 @@ public class CooldownSkis : MonoBehaviour {
     private bool allowClick = false;
     //xu ly ngon ngu
     public Text textTitle, textInfo, textStatus;
-
+    public GiftCodeManager giftCodeManager;
     public void ShowMessageBox()
     {
         //xu ly ngon ngu
