@@ -1093,7 +1093,7 @@ Animation:
   - {fileID: 7400010, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400008, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400004, guid: cfd6cfc26e7110c45a2cd7f8a299b360, type: 3}
-  - {fileID: -203655887218126122, guid: b554bea9569184a4cbb0a19a9d15f694, type: 3}
+  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
   - {fileID: 7400018, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400004, guid: d540259a34c5c84459a1cb1585c04f92, type: 3}
   - {fileID: 7400004, guid: 3834f2b0a37b42841a65256d0582fdbb, type: 3}
@@ -1266,9 +1266,9 @@ MonoBehaviour:
   - {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniDownNormal:
-  - {fileID: -203655887218126122, guid: b554bea9569184a4cbb0a19a9d15f694, type: 3}
+  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
   aniDownMagnet:
-  - {fileID: -203655887218126122, guid: b554bea9569184a4cbb0a19a9d15f694, type: 3}
+  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
   aniDownSkis:
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
