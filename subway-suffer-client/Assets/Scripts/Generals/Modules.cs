@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -1129,6 +1129,18 @@ public class Modules : MonoBehaviour {
         SaveBonusWinFirst();
         bonusFirstBox.SetActive(true);
         bonusFirstBox.transform.GetComponent<Animator>().SetTrigger("TriOpen");
+    }
+
+    public static void GiftCodeCoin(int value)
+    {
+        totalCoin += value;
+        SaveCoin();
+    }
+
+    public static void GiftCodeKey(int value)
+    {
+        totalKey += value;
+        SaveKey();
     }
 
     public static void CheckShowAds()

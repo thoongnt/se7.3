@@ -7,6 +7,9 @@ public class GiftCodeManager : MonoBehaviour
     public TMP_InputField codeInputField;
     public Button submitButton;
 
+    private int valueGiftCodeCoin = 100000;
+    private int valueGiftCodeKey = 100;
+
     void Start()
     {
         Button btn = submitButton.GetComponent<Button>();
@@ -22,13 +25,14 @@ public class GiftCodeManager : MonoBehaviour
         ProcessGiftCode(enteredCode);
     }
 
+
     void ProcessGiftCode(string code)
     {
         if (code == "GIFT123")
         {
             Debug.Log("Gift code is valid!");
-            AwardGold();
-            UnlockFeature();
+            AwardCoin();
+            AwardKey();
         }
         else
         {
@@ -36,13 +40,13 @@ public class GiftCodeManager : MonoBehaviour
         }
     }
 
-    void AwardGold()
+    void AwardCoin()
     {
-        Debug.Log("Received gold!");
+        Modules.GiftCodeCoin(valueGiftCodeCoin);
     }
 
-    void UnlockFeature()
+    void AwardKey()
     {
-        Debug.Log("Unlocked feature!");
+        Modules.GiftCodeKey(valueGiftCodeKey);
     }
 }
