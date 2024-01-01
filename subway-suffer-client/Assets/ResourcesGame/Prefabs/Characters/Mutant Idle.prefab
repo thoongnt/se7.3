@@ -1057,7 +1057,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7763442555654362090}
   - {fileID: 3413619495141739556}
@@ -1124,7 +1124,7 @@ Animation:
   - {fileID: 7400026, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: 7400004, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: 7400024, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
-  - {fileID: -203655887218126122, guid: a6e03fb971b1b16408f9ce1675c6b3e5, type: 3}
+  - {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9, type: 3}
   - {fileID: 7400022, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
   - {fileID: 7400018, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
@@ -1222,9 +1222,9 @@ MonoBehaviour:
     type: 3}
   aniRunMagnet: {fileID: -203655887218126122, guid: 13254cf1193c724418c53346968251b5,
     type: 3}
-  aniRunSkis: {fileID: -203655887218126122, guid: a6e03fb971b1b16408f9ce1675c6b3e5,
+  aniRunSkis: {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9,
     type: 3}
-  aniRunSkisMagnet: {fileID: -203655887218126122, guid: a6e03fb971b1b16408f9ce1675c6b3e5,
+  aniRunSkisMagnet: {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9,
     type: 3}
   aniRunRocket: {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64,
     type: 3}
@@ -1461,7 +1461,7 @@ Transform:
   m_GameObject: {fileID: 3414470629090527903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.359, z: 0}
+  m_LocalPosition: {x: 0, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
