@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - 0b701091099bcf67a6c4517c2fe2cc18
+  - 69dac170def77f75eb8ddb10a5715681
   appIds:
-  - 380202734663122
+  - 1079613269834251
   appLabels:
   - Subway Runner
   cookie: 1
