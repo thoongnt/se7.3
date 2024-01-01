@@ -10,9 +10,7 @@ public class GiftCodeManager : MonoBehaviour
     public Button submitButton;
     public TextMeshProUGUI feedbackText;
 
-    private int valueGiftCodeCoin = 100000;
-    private int valueGiftCodeKey = 100;
-    private List<string> giftCodes = new List<string>();
+    private Dictionary<string, Reward> giftCodes = new Dictionary<string, Reward>();
     private HashSet<string> usedGiftCodes = new HashSet<string>();
     private string filePath = "Assets/Resources/giftcodes.txt";
 
@@ -36,9 +34,16 @@ public class GiftCodeManager : MonoBehaviour
             return;
         }
 
-        if (loadedCodes != null)
+        foreach (string code in loadedCodes)
         {
-            giftCodes.AddRange(loadedCodes);
+            string[] codeData = code.Split(':');
+            if (codeData.Length == 3)
+            {
+                string codeValue = codeData[0].Trim();
+                int coinReward = int.Parse(codeData[1].Trim());
+                int keyReward = int.Parse(codeData[2].Trim());
+                giftCodes.Add(codeValue, new Reward(coinReward, keyReward));
+            }
         }
     }
 
@@ -48,50 +53,50 @@ public class GiftCodeManager : MonoBehaviour
 
         if (usedGiftCodes.Contains(enteredCode))
         {
-            feedbackText.text = "Gift code has already been used!";
+            ShowFeedback("Gift code has already been used!");
         }
         else
         {
-            if (ProcessGiftCode(enteredCode))
+            if (giftCodes.ContainsKey(enteredCode))
             {
+                Reward reward = giftCodes[enteredCode];
+                AwardGift(reward.CoinReward, reward.KeyReward);
                 usedGiftCodes.Add(enteredCode);
-                feedbackText.text = "Gift code is valid! Congratulations!";
-
-                Invoke(nameof(ClearFeedbackText), 3f);
+                ShowFeedback("Gift code is valid! Congratulations!");
             }
             else
             {
-                feedbackText.text = "Invalid gift code! Please try again.";
-                
-                Invoke(nameof(ClearFeedbackText), 3f);
+                ShowFeedback("Invalid gift code! Please try again.");
             }
         }
     }
 
-    bool ProcessGiftCode(string code)
+    void AwardGift(int coinReward, int keyReward)
     {
-        if (giftCodes.Contains(code))
-        {
-            AwardCoin();
-            AwardKey();
-            return true;
-        }
-        return false;
+        Modules.GiftCodeCoin(coinReward);
+        Modules.GiftCodeKey(keyReward);
     }
 
-    void AwardCoin()
+    void ShowFeedback(string message)
     {
-        Modules.GiftCodeCoin(valueGiftCodeCoin);
+        feedbackText.text = message;
+        Invoke(nameof(ClearFeedbackText), 3f);
     }
 
-    void AwardKey()
-    {
-        Modules.GiftCodeKey(valueGiftCodeKey);
-    }
-
-    
     void ClearFeedbackText()
     {
         feedbackText.text = "";
+    }
+}
+
+public class Reward
+{
+    public int CoinReward { get; }
+    public int KeyReward { get; }
+
+    public Reward(int coinReward, int keyReward)
+    {
+        CoinReward = coinReward;
+        KeyReward = keyReward;
     }
 }
