@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.IO;
 
 public class GiftCodeManager : MonoBehaviour
 {
@@ -13,18 +14,32 @@ public class GiftCodeManager : MonoBehaviour
     private int valueGiftCodeKey = 100;
     private List<string> giftCodes = new List<string>();
     private HashSet<string> usedGiftCodes = new HashSet<string>();
+    private string filePath = "Assets/Resources/giftcodes.txt";
 
     void Start()
     {
-        AddGiftCodes();
+        LoadGiftCodes();
         Button btn = submitButton.GetComponent<Button>();
         btn.onClick.AddListener(OnSubmitButtonClicked);
     }
 
-    void AddGiftCodes()
+    void LoadGiftCodes()
     {
-        giftCodes.Add("GIFT123");
-        giftCodes.Add("GIFT456");
+        string[] loadedCodes;
+        try
+        {
+            loadedCodes = File.ReadAllLines(filePath);
+        }
+        catch (IOException e)
+        {
+            Debug.LogError("Error reading file: " + e.Message);
+            return;
+        }
+
+        if (loadedCodes != null)
+        {
+            giftCodes.AddRange(loadedCodes);
+        }
     }
 
     public void OnSubmitButtonClicked()
