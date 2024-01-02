@@ -62,7 +62,28 @@ Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyế
 Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (ButtonClose) trên hộp thoại. Đầu tiên, nó chạy một âm thanh thông báo việc nhấn nút (Module.PlayAudioClipFree). Sau đó, nó sử dụng một Animator để chơi một trigger animation ("TriClose") trên đối tượng này. Điều này thường được sử dụng để kích hoạt một hoạt ảnh đóng hộp thoại.
 
 
-## 2.2. Thay đổi 2
+## 2.2. Thêm chức năng nhập giftcode
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/d990cd28-af4a-416a-8760-87448a641426)
+  Trong game phần này được quản lý ở trong đối tượng là ViewAdsGetSkisBox. Trong ViewAdsGetSkisBox, có một script là CooldownSkis.cs chịu trách nhiệm phần hiện thị box và chứa đối tượng GiftCodeManager để xử lý phần nhập giftcode. Trong GiftCodeManager có InputField để nhập mã gift, Button để xác nhận và Text(FeedBackText) đưa ra thông báo về mã vừa nhập.
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/2fa1322e-afae-40fe-803e-1a2785af000c)  
+  
+  File GiftCodeManager.cs dùng để xử lý quá trình nhập giftcode:  
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/e9a048e8-4390-4268-99d7-6ca4a019dd0e)  
+  Dùng để nhập mã gift, xác nhận và đưa ra thông báo.  
+
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/989e22c4-cdb1-4be1-b6a2-813bf0d67584)  
+  
+  Dùng để lưu trữ mã giftcode và các mã giftcode đã được sử dụng. Tất cả các mã được lưu trữ ở trong một file txt. Mỗi mã một dòng chứa mã gift, số vàng và số key được ngăn cách bằng dấu ":"    
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/2b2fec51-2182-4cf7-8bdd-41a6d8cc68d8)  
+
+  Xử lý sự kiện khi người chơi gửi một mã quà.  
+  Xác thực mã quà nhập với các mã đã lưu trữ:
+  - Nếu mã quà hợp lệ và chưa sử dụng, nó sẽ trao thưởng tương ứng (vàng và chìa khóa) cho người chơi.
+  - Nếu mã quà không hợp lệ hoặc đã được sử dụng, nó sẽ cung cấp phản hồi phù hợp cho người chơi.
+
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/1e22e293-d294-4b18-9e6c-ea11a1847e65)  
+  ShowFeedback(): Cập nhật văn bản phản hồi để hiển thị thông điệp dựa trên kết quả xác thực mã. ClearFeedbackText(): Xóa văn bản phản hồi sau một khoảng thời gian nhất định (3 giây trong trường hợp này).
+
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
