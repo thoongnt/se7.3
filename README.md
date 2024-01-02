@@ -83,7 +83,13 @@ Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (Butt
 
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/1e22e293-d294-4b18-9e6c-ea11a1847e65)  
   ShowFeedback(): Cập nhật văn bản phản hồi để hiển thị thông điệp dựa trên kết quả xác thực mã. ClearFeedbackText(): Xóa văn bản phản hồi sau một khoảng thời gian nhất định (3 giây trong trường hợp này).
-
+## 2.3. Thêm hiệu ứng trời mưa và tuyết
+Thêm hiệu ứng trời mưa tại các map C005, C006, C007, C008
+Cách làm: 
+1.Tạo file Effect trong Asset để lưu hiệu ứng và các thành phần của hiệu ứng.
+2.Tạo hiệu ứng trong sence để chỉnh hiệu ứng.
+3.Kéo xuống file Effect vừa tạo để lưu lại file hiệu ứng dạng prefab.
+4.Thêm kéo hiệu ứng vào các map dạng prefab để lưu hiệu ứng.
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
