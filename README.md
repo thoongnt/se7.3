@@ -28,7 +28,28 @@ Trò chơi "Subway Runner" là một trải nghiệm chạy đường tàu, đi�
   - Bãi biển: Cảnh đẹp với cát trắng, biển xanh.
 
 ## 1.2. Các usecase trong game
-Các usecase chính, nhân vật có thể chơi như nào. Cần có hình ảnh đi kèm..
+  **1. Chạy và né tránh:**
+  - Mô tả: Nhân vật chạy liên tục trên các đoạn đường tàu điện ngầm, di chuyển qua các làn đường để tránh va chạm với các vật cản và tàu hỏa.
+  - Hành động: Người chơi di chuyển nhân vật sang trái/phải hoặc nhảy để né tránh các chướng ngại vật.
+    ![image](https://github.com/thoongnt/se7.3/assets/148628352/283fa726-23e3-4358-9aa6-01a795c3a34b)
+  **2. Thu thập vàng và vật phẩm:**
+  - Mô tả: Nhân vật phải thu thập vàng và các vật phẩm hỗ trợ như ván trượt, nam châm để giúp trong việc thu thập vàng hoặc vượt qua chướng ngại vật.
+  - Hành động: Người chơi điều khiển nhân vật để nhặt vàng và các vật phẩm xuất hiện trên đường.
+    ![image](https://github.com/thoongnt/se7.3/assets/148628352/efc6f726-eea2-4e64-a47d-14aed5a03181)
+  **3. Mở Khóa Nhân Vật và Mua Vật Phẩm:**
+  - Mô tả: Người chơi có thể sử dụng vàng để mở khóa nhân vật mới hoặc mua các vật phẩm hỗ trợ như ván trượt từ cửa hàng trong game.
+  - Hành động: Người chơi sử dụng vàng tích lũy được để mua nhân vật hoặc vật phẩm từ cửa hàng.
+    ![image](https://github.com/thoongnt/se7.3/assets/148628352/80c55c0f-6f1a-4cfb-9be2-89186277903a)
+  **4. Cài Đặt và Tuỳ Chỉnh:**
+  - Mô tả: Người chơi có thể điều chỉnh cài đặt như bật/tắt nhạc nền, âm thanh, thay đổi ngôn ngữ hoặc thay đổi độ nhạy của game.
+  - Hành động: Người chơi thực hiện các tuỳ chọn trong phần cài đặt của game.
+    ![image](https://github.com/thoongnt/se7.3/assets/148628352/1d3ae79d-2762-47ab-a961-324c33627b83)
+  **5. Chơi Theo Nhóm và Đua Top Điểm:**
+  - Mô tả: Có thể kết nối với bạn bè qua mạng xã hội để thách đấu với họ và cùng nhau chơi trong chế độ nhiều người chơi (online) hoặc so điểm.
+  - Hành động: Người chơi kết nối với mạng xã hội hoặc chơi cùng bạn bè qua các chế độ nhiều người chơi.
+    ![image](https://github.com/thoongnt/se7.3/assets/148628352/c45df068-4d7c-4c1b-92dd-a3f0cf56fdbe)
+
+
 
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
