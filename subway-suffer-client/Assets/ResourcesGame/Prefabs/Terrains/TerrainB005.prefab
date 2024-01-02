@@ -12904,7 +12904,7 @@ PrefabInstance:
     - target: {fileID: 65000012280541510, guid: b94cf5847f1a9484791ebfb0b15f7e32,
         type: 3}
       propertyPath: m_Size.z
-      value: 16.181086
+      value: 29.012173
       objectReference: {fileID: 0}
     - target: {fileID: 65000012280541510, guid: b94cf5847f1a9484791ebfb0b15f7e32,
         type: 3}
@@ -12914,7 +12914,7 @@ PrefabInstance:
     - target: {fileID: 65000012280541510, guid: b94cf5847f1a9484791ebfb0b15f7e32,
         type: 3}
       propertyPath: m_Center.z
-      value: 1.267211
+      value: -5.1483326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
