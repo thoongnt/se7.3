@@ -13,7 +13,19 @@ Liệt kê thành viên nhóm phát triển dự án
 # 1. Mô tả game
 Trò chơi "Subway Runner" là một trải nghiệm chạy đường tàu, điều kiển nhân vật chạy trốn khỏi bảo vệ. Người chơi sẽ đua trên các đoạn đường tàu điện ngầm đầy nguy hiểm, tránh va chạm với các tàu, vật cản và những trở ngại khác. Họ cần thu thập đồng xu, hoàn thành các nhiệm vụ phức tạp và tìm cách duy trì tốc độ để không bị bắt kịp thời gian hoặc bị loại khỏi trò chơi. Sự nhanh nhẹn và phản ứng nhanh nhạy là chìa khóa để vượt qua mỗi cấp độ và đạt được điểm số cao. Ngoài ra game còn có rất nhiều nhân vật, vật phẩm hỗ trợ và đặc biệt là so điểm với bạn bè.
 ## 1.1. Các kịch bản chơi game
-Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
+* Game goal: Chạy, kiếm nhiều vàng để mở khóa tất cả nhân vật, mua các vật phẩm hỗ trợ để đạt được điểm càng cao càng tốt.
+* Objectives:
+  - Victory objective : không thực sự có (tự tạo cho bản thân 1 mục tiêu : mở khóa hết nhân vật; đạt điểm cao nhất thế giới;...)
+  - Progression Objectives : các nhiệm vụ, thử thách, các dấu mốc nhỏ trong trò chơi.
+  - Beneficial Objectives : ăn vàng hoặc hoàn thành nhiệm vụ, thử thách để có các vật phẩm giúp ích cho quá trình chơi.
+  - Challenge Objectives : những thứ khó hoàn thành trong trò chơi.
+* Các khu vực nhân vật chạy và khám phá:
+  - Ai cập cổ: Cảnh quan với các kim tự tháp, sa mạc, và những di tích cổ xưa.
+  - Ngoại ô thành phố: Khu vực ngoại ô với các nhà cửa, công viên và đường phố nhỏ.
+  - Cầu: Chạy trên một chiếc cầu sắt bắc qua sông.
+  - Nhà ga xe lửa: Gần các nhà ga với các đoạn đường tàu và tàu hỏa chạy qua.
+  - Thành phố: Khu vực trung tâm với những tòa nhà cao tầng và xe bus.
+  - Bãi biển: Cảnh đẹp với cát trắng, biển xanh.
 
 ## 1.2. Các usecase trong game
 Các usecase chính, nhân vật có thể chơi như nào. Cần có hình ảnh đi kèm..
