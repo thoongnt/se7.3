@@ -53,7 +53,15 @@ Trò chơi "Subway Runner" là một trải nghiệm chạy đường tàu, đi�
 
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
-## 2.1. Thay đổi 1
+## 2.1. Tắt box tìm đối thủ
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/37f366b7-2775-4696-b03d-2c0c466d1a78)  
+  Trong game, box tìm đối thủ được quản lý bởi một đối tượng gọi là AutoFindOpponentsBox. Trong AutoFindOpponentsBox, có một script được gọi là DeactiveMessageBox.cs, đây chịu trách nhiệm điều khiển hiển thị và ẩn đi box thông báo trạng thái.
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/d6a6c1d4-1653-49a2-915b-4b17976b73f9) ![image](https://github.com/thoongnt/se7.3/assets/148628352/89909d0e-48b0-402d-ab2e-9aa6cb6fc11c)  
+Để tắt box thông qua việc nhấn nút ButtonClose, ta cần thêm một hàm mới, chẳng hạn như ButtonCloseMessage(). Hàm này được liên kết với nút ButtonClose và khi được gọi, nó sẽ thực hiện hành động tắt box hiển thị trạng thái bằng cách tương tác với DeactiveMessageBox.cs. Điều này giúp người chơi đóng box một cách dễ dàng khi cần thiết.    
+![image](https://github.com/thoongnt/se7.3/assets/148628352/dfb649dc-3957-4c6d-a359-b654587f536c) ![image](https://github.com/thoongnt/se7.3/assets/148628352/248fd586-4bc9-42d0-8172-8c13c6872ef5)  
+Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (ButtonClose) trên hộp thoại. Đầu tiên, nó chạy một âm thanh thông báo việc nhấn nút (Module.PlayAudioClipFree). Sau đó, nó sử dụng một Animator để chơi một trigger animation ("TriClose") trên đối tượng này. Điều này thường được sử dụng để kích hoạt một hoạt ảnh đóng hộp thoại.
+
+
 ## 2.2. Thay đổi 2
 
 # 3. Hướng dẫn Khởi tạo dự án
