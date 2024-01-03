@@ -11,7 +11,7 @@ Nguyễn Hữu Tần - 21001582
 Chu Minh Ngọc - 21001570  
 Đỗ Thị Trang - 21001591  
 # 1. Mô tả game
-Mô tả cô đọng trong 5-10 dòng
+Trò chơi "Subway Runner" là một trải nghiệm chạy đường tàu, điều kiển nhân vật chạy trốn khỏi bảo vệ. Người chơi sẽ đua trên các đoạn đường tàu điện ngầm đầy nguy hiểm, tránh va chạm với các tàu, vật cản và những trở ngại khác. Họ cần thu thập đồng xu, hoàn thành các nhiệm vụ phức tạp và tìm cách duy trì tốc độ để không bị bắt kịp thời gian hoặc bị loại khỏi trò chơi. Sự nhanh nhẹn và phản ứng nhanh nhạy là chìa khóa để vượt qua mỗi cấp độ và đạt được điểm số cao. Ngoài ra game còn có rất nhiều nhân vật, vật phẩm hỗ trợ và đặc biệt là so điểm với bạn bè.  
 
 ## 1.1. Các kịch bản chơi game
 * Game goal: Chạy, kiếm nhiều vàng để mở khóa tất cả nhân vật, mua các vật phẩm hỗ trợ để đạt được điểm càng cao càng tốt.
@@ -85,7 +85,7 @@ Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (Butt
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/1e22e293-d294-4b18-9e6c-ea11a1847e65)  
   ShowFeedback(): Cập nhật văn bản phản hồi để hiển thị thông điệp dựa trên kết quả xác thực mã. ClearFeedbackText(): Xóa văn bản phản hồi sau một khoảng thời gian nhất định (3 giây trong trường hợp này).
 ## 2.3. Thêm hiệu ứng trời mưa và tuyết
-Thêm hiệu ứng trời mưa tại các map C005, C006, C007, C008  
+Thêm hiệu ứng trời mưa tại các map C và B 
 Cách làm:   
 1.Tạo file Effect trong Asset để lưu hiệu ứng và các thành phần của hiệu ứng.
 ![image](https://github.com/thoongnt/se7.3/assets/95564136/21729899-8c46-4826-9f54-a91abb561064)
@@ -93,7 +93,9 @@ Cách làm:
 3.Kéo xuống file Effect vừa tạo để lưu lại file hiệu ứng dạng prefab.
 ![image](https://github.com/thoongnt/se7.3/assets/95564136/8558440d-bc04-43b2-9bbe-26da99490ff2)
 4.Thêm vào các map bằng cách kéo hiệu ứng vào các map dạng prefab để lưu hiệu ứng.
-![image](https://github.com/thoongnt/se7.3/assets/95564136/f3de02f6-f621-4324-8c31-e6bb0ca09f9f)
+![image](https://github.com/thoongnt/se7.3/assets/95564136/f3de02f6-f621-4324-8c31-e6bb0ca09f9f)  
+![image](https://github.com/thoongnt/se7.3/assets/95564136/7328d894-51e7-450f-b1fe-4d5d569c57b1)  
+
 
 
 ## 2.4. Không cho phép sử dụng ván bay trước cửa hầm
