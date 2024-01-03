@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 
-public class CooldownSkis : MonoBehaviour {
+public class CooldownSkis : MonoBehaviour
+{
 
     public int secondsCooldown = 15;
     public Image runProgress;
@@ -12,7 +13,7 @@ public class CooldownSkis : MonoBehaviour {
     private bool allowClick = false;
     //xu ly ngon ngu
     public Text textTitle, textInfo, textStatus;
-
+    public GiftCodeManager giftCodeManager;
     public void ShowMessageBox()
     {
         //xu ly ngon ngu

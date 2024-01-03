@@ -1144,6 +1144,18 @@ public class Modules : MonoBehaviour {
 #endif
     }
 
+    public static void GiftCodeCoin(int value)
+    {
+        totalCoin += value;
+        SaveCoin();
+    }
+
+    public static void GiftCodeKey(int value)
+    {
+        totalKey += value;
+        SaveKey();
+    }
+
     public static void HandleGameOver()
     {
         CheckShowAds();

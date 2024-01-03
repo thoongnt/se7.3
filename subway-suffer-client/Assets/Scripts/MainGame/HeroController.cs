@@ -1104,7 +1104,7 @@ public class HeroController : MonoBehaviour {
         if (typeCollider == TypeCollider.bottom) { 
             checkEnterExitCol = tempCol; /*if (barrier != null) print("bottom");*/ 
                if (barrier != null && myCollider.transform.position.y < 8.5f){  
-                if (collision.transform.position.z < transform.position.z || (barrier != null && barrier.typeBarrier == TypeBarrier.neverFall && Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
+                if (collision.transform.position.z < transform.position.z || (barrier != null || barrier.typeBarrier == TypeBarrier.neverFall && Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
                         transform.GetComponent<Rigidbody>().isKinematic = true;
                         transform.Translate(Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(29f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);
                         transform.GetComponent<Rigidbody>().isKinematic = false;
@@ -1528,6 +1528,22 @@ public class HeroController : MonoBehaviour {
                 else Modules.poolOthers.GetComponent<HighItemsController>().PlayEffectEatItems(collider.transform.position);
                 item.ResetItem();
                 if (item.typeItem != TypeItems.trampoline && item.typeItem != TypeItems.roadBonus) collider.gameObject.SetActive(false);
+            }
+            RunFunctionItem(item.typeItem, collider.transform.position.x);
+        }
+    }
+
+    //Kiểm tra nhân vật có còn trong khối startTunner
+    void OnTriggerStay(Collider collider)
+    {
+        if (Modules.statusGame != StatusGame.play) return;
+        ItemInformation item = collider.gameObject.GetComponent<ItemInformation>();
+        if (item != null)
+        {
+            if (item.typeItem == TypeItems.startTunner)
+            {
+                Modules.SetAllowHoverbike(false);
+                return;
             }
             RunFunctionItem(item.typeItem, collider.transform.position.x);
         }
