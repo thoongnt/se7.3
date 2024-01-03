@@ -111,6 +111,27 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
   bên phía scene GameMain thì gắn chức năng ButtonLoginFacebook() của PageAchievement.cs vào On Click() ở phần LoginFB trong LoginFacebook trong BackgroundTopFriend trong phần BackgroundContent của scene GameMain
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/7b819cab-9b84-46bd-9108-1df5e0471062)
   và cuối cùng là gán scrip cho FBController của scene LoadData.
+# 2.6. Thêm nhân vật mới vào Game
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/92459544-7391-4080-9522-e737919d08ab)
+  Đầu tiên thêm vào List Character Use của ListResources 1 dối tượng nhân vật mới chứa toàn bộ thông tin và animation ở các element sau 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/426febb2-cf52-4152-8fa5-463d599501d1)
+  Ở trong hàm heroInfoHero tạo thêm 1 List chứa thông tin của nhân vật mới
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/3435a810-cb74-4e21-b45f-ba3d78755f8a)
+  Tạo thêm thư mục chứa nhân vật gốc và animation liên quan đến nó  
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/d0f5a0e3-073c-45ad-b85b-e01154afecca)
+  Tạo file prefab chứa animation và các copy các dối tượng của nhân vật khác cho nó 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/e7590c43-cc48-4e09-82a1-0ff37d637914)
+  Cập nhật thông tin nhân vật trong cửa hàng 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/d3f1bc47-78a7-4aaa-b7cf-4a78a38889d1)
+  Cập nhất các Point Check Ray, Poin Show Hero, Hover Board Control và Collider
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/8d168982-82f1-4a02-b8e5-f34edb904c7c)
+  Cập nhật FakeShadow và Point RayCast
+
+
+
+
+
+
 
 
 
