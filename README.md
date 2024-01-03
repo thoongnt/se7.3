@@ -91,6 +91,19 @@ Cách làm:
 3.Kéo xuống file Effect vừa tạo để lưu lại file hiệu ứng dạng prefab.
 4.Thêm kéo hiệu ứng vào các map dạng prefab để lưu hiệu ứng.
 
+## 2.4. Không cho phép sử dụng ván bay trước cửa hầm
+Nếu như sử dụng ván bay trước cửa hầm thì sẽ bị bay xuyên nóc do ván bay bay theo đường chéo đi lên. Nếu như đã đi vào trong hầm, hoặc bên trên có mái che, một collider nào đấy thì cũng khóa lại ván bay. Phần này đã được sử lý ở hàm CheckCeintBlock() trong file HeroController.cs  
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/1aaac298-8144-48db-abc8-a04abd46d66e)
+Trước tiên, hàm kiểm tra xem trò chơi đang ở trạng thái chơi (StatusGame.play), không phải là trạng thái hướng dẫn (gameGuide không được đặt là "YES"), và không sử dụng bất kỳ bonus nào.  
+Sử dụng Raycast để bắn một "tia" từ một điểm cụ thể lên phía trên. Nếu tia chạm vào một collider, điều này có nghĩa là có một vật thể nằm phía trên nhân vật. Hàm sẽ kiểm tra xem collider đó thuộc layer nào. Nếu không thuộc layer mặc định, hàm sẽ cấm việc sử dụng một tính năng sử dụng xe bay. Nếu tia không chạm vào bất kỳ collider nào phía trên, tức là không có vật thể nào chặn, hàm sẽ cho phép việc sử dụng xe bay.  
+Nhưng đây là xử lý khi bên trên có vật cản, nếu như không có vật cản thì vẫn sử dụng được xe bay dẫn đến bay xuyên nóc. Cách sử lý ở đây là thêm một box vô hình ở trước cửa hầm, nếu như nhân vật đi vào trong box thì sẽ cấm không cho sử dụng xe bay. 
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/5d77eeb0-99ab-46d0-83a3-3e67ac3375f5)  ![image](https://github.com/thoongnt/se7.3/assets/148628352/97a577e3-1225-4410-8c0f-3beb819aac8f)  
+Ta viết thêm hàm OnTriggerStay(Collider collider) để kiểm tra nhân vật có còn ở trong khối startTunner hay không  
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/3bc50848-60b3-407e-ad5d-1a8272f1b64d)  
+Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe bay, không cho sử dụng và ngược lại.
+
+
+
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
 Đăng ký tài khoản Unity bằng account sinh viên để có thể tham gia chương trình Education License của Unity
