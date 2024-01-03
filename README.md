@@ -103,7 +103,16 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
   Nếu như barrier khác null thì gán collider để xử lý va chạm, không cho nhân vật đi xuyên dốc dẫn đến bug.
 # 2.6. Gắn chức năng Đăng nhập Facebook
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/92688179-5747-4875-babc-90103f23fb01)
-  Tải Facbook SDK v16.0.2 từ (https://developers.facebook.com/)
+  Tải Facbook SDK v16.0.2 từ https://developers.facebook.com/ và import nó vào trong Project. Sau đó trong Project sẽ hiện ra như trên ảnh.
+  Tiếp theo ta tạo thêm 1 file FacebookController.cs với mục đích quản lý việc đăng nhập Facebook và lấy thông tin người dùng.
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/8541089c-92ff-4bd6-8575-89c5e4b0cc2e)
+  và tạo thêm 1 hàm ButtonLoginFacebook() bên PageAchievement.cs để đăng nhập
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/80a5c438-2dcc-4095-83f5-2f3bcabe2428)
+  bên phía scene GameMain thì gắn chức năng ButtonLoginFacebook() của PageAchievement.cs vào On Click() ở phần LoginFB trong LoginFacebook trong BackgroundTopFriend trong phần BackgroundContent của scene GameMain
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/7b819cab-9b84-46bd-9108-1df5e0471062)
+  và cuối cùng là gán scrip cho FBController của scene LoadData.
+
+
 
 
 # 3. Hướng dẫn Khởi tạo dự án
