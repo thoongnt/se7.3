@@ -1,17 +1,13 @@
-﻿
+
 # SUBWAY SUFFER 
 
 Tiêu đề vắn tắt dự án
 
 **Thành viên nhóm:**
 Liệt kê thành viên nhóm phát triển dự án
-- Trần Duy Thành - 21001584
-- Nguyễn Trung Thông - 21001589
-- Đỗ Thị Trang – 21001591
-- Nguyễn Hữu Tần – 21001582
-- Chu Minh Ngọc - 21001570
 # 1. Mô tả game
-Trò chơi "Subway Runner" là một trải nghiệm chạy đường tàu, điều kiển nhân vật chạy trốn khỏi bảo vệ. Người chơi sẽ đua trên các đoạn đường tàu điện ngầm đầy nguy hiểm, tránh va chạm với các tàu, vật cản và những trở ngại khác. Họ cần thu thập đồng xu, hoàn thành các nhiệm vụ phức tạp và tìm cách duy trì tốc độ để không bị bắt kịp thời gian hoặc bị loại khỏi trò chơi. Sự nhanh nhẹn và phản ứng nhanh nhạy là chìa khóa để vượt qua mỗi cấp độ và đạt được điểm số cao. Ngoài ra game còn có rất nhiều nhân vật, vật phẩm hỗ trợ và đặc biệt là so điểm với bạn bè.
+Mô tả cô đọng trong 5-10 dòng
+
 ## 1.1. Các kịch bản chơi game
 * Game goal: Chạy, kiếm nhiều vàng để mở khóa tất cả nhân vật, mua các vật phẩm hỗ trợ để đạt được điểm càng cao càng tốt.
 * Objectives:
