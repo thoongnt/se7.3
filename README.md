@@ -5,6 +5,11 @@ Tiêu đề vắn tắt dự án
 
 **Thành viên nhóm:**
 Liệt kê thành viên nhóm phát triển dự án
+Nguyễn Trung Thông - 21001589
+Trần Duy Thành - 21001584
+Nguyễn Hữu Tần - 21001582
+Chu Minh Ngọc - 21001570
+Đỗ Thị Trang - 21001591
 # 1. Mô tả game
 Mô tả cô đọng trong 5-10 dòng
 
