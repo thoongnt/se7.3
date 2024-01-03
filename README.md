@@ -83,9 +83,13 @@ Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (Butt
 Thêm hiệu ứng trời mưa tại các map C005, C006, C007, C008
 Cách làm: 
 1.Tạo file Effect trong Asset để lưu hiệu ứng và các thành phần của hiệu ứng.
+![image](https://github.com/thoongnt/se7.3/assets/95564136/21729899-8c46-4826-9f54-a91abb561064)
 2.Tạo hiệu ứng trong sence để chỉnh hiệu ứng.
 3.Kéo xuống file Effect vừa tạo để lưu lại file hiệu ứng dạng prefab.
-4.Thêm kéo hiệu ứng vào các map dạng prefab để lưu hiệu ứng.
+![image](https://github.com/thoongnt/se7.3/assets/95564136/8558440d-bc04-43b2-9bbe-26da99490ff2)
+4.Thêm vào các map bằng cách kéo hiệu ứng vào các map dạng prefab để lưu hiệu ứng.
+![image](https://github.com/thoongnt/se7.3/assets/95564136/f3de02f6-f621-4324-8c31-e6bb0ca09f9f)
+
 
 ## 2.4. Không cho phép sử dụng ván bay trước cửa hầm
 Nếu như sử dụng ván bay trước cửa hầm thì sẽ bị bay xuyên nóc do ván bay bay theo đường chéo đi lên. Nếu như đã đi vào trong hầm, hoặc bên trên có mái che, một collider nào đấy thì cũng khóa lại ván bay. Phần này đã được sử lý ở hàm CheckCeintBlock() trong file HeroController.cs  
