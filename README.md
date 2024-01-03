@@ -101,6 +101,40 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
 # 2.5. Fix bug đi lên dốc ở tàu
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/7a6340df-ea82-4ff7-be01-43dec5202880)
   Nếu như barrier khác null thì gán collider để xử lý va chạm, không cho nhân vật đi xuyên dốc dẫn đến bug.
+# 2.6. Gắn chức năng Đăng nhập Facebook
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/92688179-5747-4875-babc-90103f23fb01)
+  Tải Facbook SDK v16.0.2 từ https://developers.facebook.com/ và import nó vào trong Project. Sau đó trong Project sẽ hiện ra như trên ảnh.
+  Tiếp theo ta tạo thêm 1 file FacebookController.cs với mục đích quản lý việc đăng nhập Facebook và lấy thông tin người dùng.
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/8541089c-92ff-4bd6-8575-89c5e4b0cc2e)
+  và tạo thêm 1 hàm ButtonLoginFacebook() bên PageAchievement.cs để đăng nhập
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/80a5c438-2dcc-4095-83f5-2f3bcabe2428)
+  bên phía scene GameMain thì gắn chức năng ButtonLoginFacebook() của PageAchievement.cs vào On Click() ở phần LoginFB trong LoginFacebook trong BackgroundTopFriend trong phần BackgroundContent của scene GameMain
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/7b819cab-9b84-46bd-9108-1df5e0471062)
+  và cuối cùng là gán scrip cho FBController của scene LoadData.
+# 2.6. Thêm nhân vật mới vào Game
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/92459544-7391-4080-9522-e737919d08ab)
+  Đầu tiên thêm vào List Character Use của ListResources 1 dối tượng nhân vật mới chứa toàn bộ thông tin và animation ở các element sau 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/426febb2-cf52-4152-8fa5-463d599501d1)
+  Ở trong hàm heroInfoHero tạo thêm 1 List chứa thông tin của nhân vật mới
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/3435a810-cb74-4e21-b45f-ba3d78755f8a)
+  Tạo thêm thư mục chứa nhân vật gốc và animation liên quan đến nó  
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/d0f5a0e3-073c-45ad-b85b-e01154afecca)
+  Tạo file prefab chứa animation và các copy các dối tượng của nhân vật khác cho nó 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/e7590c43-cc48-4e09-82a1-0ff37d637914)
+  Cập nhật thông tin nhân vật trong cửa hàng 
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/d3f1bc47-78a7-4aaa-b7cf-4a78a38889d1)
+  Cập nhất các Point Check Ray, Poin Show Hero, Hover Board Control và Collider
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/8d168982-82f1-4a02-b8e5-f34edb904c7c)
+  Cập nhật FakeShadow và Point RayCast
+
+
+
+
+
+
+
+
+
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
