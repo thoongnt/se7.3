@@ -80,8 +80,8 @@ Hàm này được kích hoạt khi người dùng nhấn vào nút đóng (Butt
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/1e22e293-d294-4b18-9e6c-ea11a1847e65)  
   ShowFeedback(): Cập nhật văn bản phản hồi để hiển thị thông điệp dựa trên kết quả xác thực mã. ClearFeedbackText(): Xóa văn bản phản hồi sau một khoảng thời gian nhất định (3 giây trong trường hợp này).
 ## 2.3. Thêm hiệu ứng trời mưa và tuyết
-Thêm hiệu ứng trời mưa tại các map C005, C006, C007, C008
-Cách làm: 
+Thêm hiệu ứng trời mưa tại các map C005, C006, C007, C008  
+Cách làm:   
 1.Tạo file Effect trong Asset để lưu hiệu ứng và các thành phần của hiệu ứng.
 ![image](https://github.com/thoongnt/se7.3/assets/95564136/21729899-8c46-4826-9f54-a91abb561064)
 2.Tạo hiệu ứng trong sence để chỉnh hiệu ứng.
