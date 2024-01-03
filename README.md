@@ -101,6 +101,10 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
 # 2.5. Fix bug đi lên dốc ở tàu
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/7a6340df-ea82-4ff7-be01-43dec5202880)
   Nếu như barrier khác null thì gán collider để xử lý va chạm, không cho nhân vật đi xuyên dốc dẫn đến bug.
+# 2.6. Gắn chức năng Đăng nhập Facebook
+  ![image](https://github.com/thoongnt/se7.3/assets/148631302/92688179-5747-4875-babc-90103f23fb01)
+  Tải Facbook SDK v16.0.2 từ (https://developers.facebook.com/)
+
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
