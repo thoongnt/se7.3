@@ -105,7 +105,17 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
 # 2.5. Fix bug đi lên dốc ở tàu
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/7a6340df-ea82-4ff7-be01-43dec5202880)
   Nếu như barrier khác null thì gán collider để xử lý va chạm, không cho nhân vật đi xuyên dốc dẫn đến bug.
-# 2.6. Gắn chức năng Đăng nhập Facebook
+# 2.6. Fix lỗi xuyên tường
+  Lỗi xuyên tường xảy ra ở 3 map: B007, C008, D016. Chỉnh một số thông số ở 3 object RoadA, RoadCM, RoadDown trong Collider của các map có thể sửa được lỗi này.
+  ![image](https://github.com/thoongnt/se7.3/assets/95564136/3ca363be-5e83-4e00-9032-ef6621ba2249)
+  ![image](https://github.com/thoongnt/se7.3/assets/95564136/7857eb2f-05ce-4526-8a3e-5ac76df74fd4)
+  ![image](https://github.com/thoongnt/se7.3/assets/95564136/b25c09f3-2957-476d-8d57-fc011294555d)
+# 2.7. Fix lỗi va chạm hàng rào trên lối ra của đường hầm
+  Lỗi: Nhân vật chạy xuyên qua rào chắn. 
+   ![image](https://github.com/thoongnt/se7.3/assets/95564136/99b693b0-e5e4-4bdc-a9eb-e1e0eb067c6e)
+  Cách sửa lỗi: Thêm collide cho rào chắn vào các map có hàng rào.  
+  ![image](https://github.com/thoongnt/se7.3/assets/95564136/41436809-890a-4daf-a81c-c2fb30663fdb)  
+# 2.8. Gắn chức năng Đăng nhập Facebook
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/92688179-5747-4875-babc-90103f23fb01)
   Tải Facbook SDK v16.0.2 từ https://developers.facebook.com/ và import nó vào trong Project. Sau đó trong Project sẽ hiện ra như trên ảnh.
   Tiếp theo ta tạo thêm 1 file FacebookController.cs với mục đích quản lý việc đăng nhập Facebook và lấy thông tin người dùng.
@@ -115,7 +125,7 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
   bên phía scene GameMain thì gắn chức năng ButtonLoginFacebook() của PageAchievement.cs vào On Click() ở phần LoginFB trong LoginFacebook trong BackgroundTopFriend trong phần BackgroundContent của scene GameMain
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/7b819cab-9b84-46bd-9108-1df5e0471062)
   và cuối cùng là gán scrip cho FBController của scene LoadData.
-# 2.6. Thêm nhân vật mới vào Game
+# 2.9. Thêm nhân vật mới vào Game
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/92459544-7391-4080-9522-e737919d08ab)
   Đầu tiên thêm vào List Character Use của ListResources 1 dối tượng nhân vật mới chứa toàn bộ thông tin và animation ở các element sau 
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/426febb2-cf52-4152-8fa5-463d599501d1)
