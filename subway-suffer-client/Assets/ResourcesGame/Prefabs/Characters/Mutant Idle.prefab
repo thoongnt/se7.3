@@ -1081,7 +1081,7 @@ Animation:
   - {fileID: -203655887218126122, guid: 72ee511a53148ba4cb6b2c150ffaa157, type: 3}
   - {fileID: -203655887218126122, guid: d59a6f3e216e70241a394efc8794668c, type: 3}
   - {fileID: 7400000, guid: 3ade10d5be7dbcc4f95a79c744c3668d, type: 3}
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   - {fileID: 7400000, guid: bbf3438ee8f6e784c88d51a6ab978a14, type: 3}
   - {fileID: 7400002, guid: 2ef648e37c931da47bece80187d1863c, type: 3}
@@ -1093,7 +1093,7 @@ Animation:
   - {fileID: 7400010, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400008, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400004, guid: cfd6cfc26e7110c45a2cd7f8a299b360, type: 3}
-  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
+  - {fileID: -203655887218126122, guid: 3d9e3af4fff46fc4e8eb204d2ef78174, type: 3}
   - {fileID: 7400018, guid: 297c3e3222d481847bd8d444336101de, type: 3}
   - {fileID: 7400004, guid: d540259a34c5c84459a1cb1585c04f92, type: 3}
   - {fileID: 7400004, guid: 3834f2b0a37b42841a65256d0582fdbb, type: 3}
@@ -1125,7 +1125,7 @@ Animation:
   - {fileID: 7400026, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: 7400004, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: 7400024, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
-  - {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9, type: 3}
+  - {fileID: -203655887218126122, guid: 661f4fe7bc4484f4f9460af4b3fa4b70, type: 3}
   - {fileID: 7400022, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
   - {fileID: 7400018, guid: 437a33fc0ab7f964ca6f8f78e6e9116f, type: 3}
@@ -1148,7 +1148,7 @@ Animation:
   - {fileID: 7400010, guid: 9bd18c18ac3216f42b85dbb4dffde9fe, type: 3}
   - {fileID: 7400008, guid: 9bd18c18ac3216f42b85dbb4dffde9fe, type: 3}
   - {fileID: 7400018, guid: 9bd18c18ac3216f42b85dbb4dffde9fe, type: 3}
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: 7400000, guid: ca2379d15da13e449b1996404f543829, type: 3}
   - {fileID: 7400002, guid: ca2379d15da13e449b1996404f543829, type: 3}
   - {fileID: 7400004, guid: ca2379d15da13e449b1996404f543829, type: 3}
@@ -1223,9 +1223,9 @@ MonoBehaviour:
     type: 3}
   aniRunMagnet: {fileID: -203655887218126122, guid: 13254cf1193c724418c53346968251b5,
     type: 3}
-  aniRunSkis: {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9,
+  aniRunSkis: {fileID: -203655887218126122, guid: 661f4fe7bc4484f4f9460af4b3fa4b70,
     type: 3}
-  aniRunSkisMagnet: {fileID: -203655887218126122, guid: f743eed08e1fc054da33effb52b960d9,
+  aniRunSkisMagnet: {fileID: -203655887218126122, guid: 661f4fe7bc4484f4f9460af4b3fa4b70,
     type: 3}
   aniRunRocket: {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64,
     type: 3}
@@ -1244,31 +1244,31 @@ MonoBehaviour:
   aniJumpMagnetPower:
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpSkisPower:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpSkisMagnetPower:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpNormal:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpMagnet:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpSkis:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniJumpSkisMagnet:
-  - {fileID: -203655887218126122, guid: bf331538053b55e4dbb60c86e868633e, type: 3}
+  - {fileID: -203655887218126122, guid: df24119d80ff18949818da81c5f19130, type: 3}
   - {fileID: -203655887218126122, guid: 305275f0f5f08f14289fbc0fdc7f1b64, type: 3}
   - {fileID: -203655887218126122, guid: 84d1449771a6d8745ad1637b8f1d73b4, type: 3}
   aniDownNormal:
-  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
+  - {fileID: -203655887218126122, guid: 3d9e3af4fff46fc4e8eb204d2ef78174, type: 3}
   aniDownMagnet:
-  - {fileID: -203655887218126122, guid: 0854219ffaaf28049b3a4f8bdcd29c48, type: 3}
+  - {fileID: -203655887218126122, guid: 3d9e3af4fff46fc4e8eb204d2ef78174, type: 3}
   aniDownSkis:
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
   - {fileID: -203655887218126122, guid: c8fa96196272822469d33df55f13689a, type: 3}
