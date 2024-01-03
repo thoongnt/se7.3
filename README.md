@@ -102,7 +102,9 @@ Ta viết thêm hàm OnTriggerStay(Collider collider) để kiểm tra nhân v�
   ![image](https://github.com/thoongnt/se7.3/assets/148628352/3bc50848-60b3-407e-ad5d-1a8272f1b64d)  
 Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe bay, không cho sử dụng và ngược lại.
 
-
+# 2.5. Fix bug đi lên dốc ở tàu
+  ![image](https://github.com/thoongnt/se7.3/assets/148628352/7a6340df-ea82-4ff7-be01-43dec5202880)
+  Nếu như barrier khác null thì gán collider để xử lý va chạm, không cho nhân vật đi xuyên dốc dẫn đến bug.
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
