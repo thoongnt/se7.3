@@ -111,10 +111,10 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
   ![image](https://github.com/thoongnt/se7.3/assets/95564136/7857eb2f-05ce-4526-8a3e-5ac76df74fd4)
   ![image](https://github.com/thoongnt/se7.3/assets/95564136/b25c09f3-2957-476d-8d57-fc011294555d)
 ## 2.7. Fix lỗi va chạm hàng rào trên lối ra của đường hầm
-  Lỗi: Nhân vật chạy xuyên qua rào chắn. 
-   ![image](https://github.com/thoongnt/se7.3/assets/95564136/99b693b0-e5e4-4bdc-a9eb-e1e0eb067c6e)
-  Cách sửa lỗi: Thêm collide cho rào chắn vào các map có hàng rào.  
-  ![image](https://github.com/thoongnt/se7.3/assets/95564136/41436809-890a-4daf-a81c-c2fb30663fdb)  
+  Lỗi: Nhân vật chạy xuyên qua rào chắn.   
+   ![image](https://github.com/thoongnt/se7.3/assets/95564136/99b693b0-e5e4-4bdc-a9eb-e1e0eb067c6e)  
+  Cách sửa lỗi: Thêm collide cho rào chắn vào các map có hàng rào.    
+  ![image](https://github.com/thoongnt/se7.3/assets/95564136/41436809-890a-4daf-a81c-c2fb30663fdb)    
 ## 2.8. Gắn chức năng Đăng nhập Facebook
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/92688179-5747-4875-babc-90103f23fb01)  
   Tải Facbook SDK v16.0.2 từ https://developers.facebook.com/ và import nó vào trong Project. Sau đó trong Project sẽ hiện ra như trên ảnh.
@@ -141,15 +141,18 @@ Nếu như vẫn còn ở trong khối startTunner thì tiếp tục khóa xe ba
   ![image](https://github.com/thoongnt/se7.3/assets/148631302/8d168982-82f1-4a02-b8e5-f34edb904c7c)    
   Cập nhật FakeShadow và Point RayCast    
 ## 2.10. Responsive
-
-  Ta sẽ thay đổi toạ độ và kích cỡ của các thẻ:
-
-
-
+![image](https://github.com/thoongnt/se7.3/assets/95564136/d2d4fdf2-ca37-4d12-aeab-72069a18f48a)
+![image](https://github.com/thoongnt/se7.3/assets/95564136/bb4f7c9f-21c8-4b72-9d7d-484358638256)
+![image](https://github.com/thoongnt/se7.3/assets/95564136/05eaeb0f-ed17-4da3-9c80-5c944c22574b)  
 
 
+  Ta sẽ thay đổi toạ độ và kích cỡ của các thẻ:  
 
+![image](https://github.com/thoongnt/se7.3/assets/95564136/f1821489-4820-4fc0-8a50-87b7bb15ba1e)  
 
+ Kết quả sau khi chỉnh các thông số trên:  
+ ![image](https://github.com/thoongnt/se7.3/assets/95564136/ef907b9c-5dd5-49c0-8ef9-4bfe24ccb5d3)
+![image](https://github.com/thoongnt/se7.3/assets/95564136/2a53e3eb-667a-4637-a51b-28b5d7b258be)  
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
