@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idHero: 008
   codeBody: N01
-  costHero: 9999999
+  costHero: 999
   noteHero: 7
   iconSale: {fileID: 0}
   listObjectHide: []
